@@ -13,7 +13,7 @@ describe("ensureDirectoryOf", () => {
     const dirname = path.dirname(filePath)
     Assert.equal(fs.existsSync(dirname), false)
     const createdPath = ensureDirectoryOf(filePath)
-    console.log(createdPath)
+    console.debug(createdPath)
     try {
       Assert.equal(filePath.endsWith(filePath), true)
       Assert.equal(ensureDirectoryOf(filePath).endsWith(filePath), true)
