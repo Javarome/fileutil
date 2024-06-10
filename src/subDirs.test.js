@@ -6,30 +6,30 @@ import subDirsNames from "./subDirsNames.js"
 
 describe("subDirs", () => {
 
-  const dirName1 = "test/subDir1"
-  const dirName2 = "test/subDir2"
-  const dirName11 = "test/subDir1/subDir11"
+  const subDir1 = "test/subDir1"
+  const subDir2 = "test/subDir2"
+  const subDir11 = "test/subDir1/subDir11"
 
   test("test for subdir", async () => {
     assert.deepEqual(await subDirs("test"), [])
-    fs.mkdirSync(dirName1)
+    fs.mkdirSync(subDir1)
     try {
       assert.deepEqual(await subDirsNames("test"), ["subDir1"])
-      fs.mkdirSync(dirName2)
+      fs.mkdirSync(subDir2)
       try {
         assert.deepEqual(await subDirsNames("test"), ["subDir1", "subDir2"])
-        fs.mkdirSync(dirName11)
+        fs.mkdirSync(subDir11)
         try {
           assert.deepEqual(await subDirsNames("test"), ["subDir1", "subDir2"])
-          assert.deepEqual(await subDirsNames(dirName1), ["subDir11"])
+          assert.deepEqual(await subDirsNames(subDir1), ["subDir11"])
         } finally {
-          fs.rmdirSync(dirName11)
+          fs.rmdirSync(subDir11)
         }
       } finally {
-        fs.rmdirSync(dirName2)
+        fs.rmdirSync(subDir2)
       }
     } finally {
-      fs.rmdirSync(dirName1)
+      fs.rmdirSync(subDir1)
     }
   })
 })

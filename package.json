@@ -23,7 +23,7 @@
   },
   "types": "./index.d.ts",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "license": "MIT",
   "homepage": "https://github.com/Javarome/ssg-api#readme",
@@ -34,7 +34,7 @@
   "scripts": {
     "prebuild": "npm install && npm test",
     "build": "rm -Rf dist && cp -R src dist && tsc && cp README.md dist && cp package*.json dist",
-    "test": "node --test src/*.test.js",
+    "test": "node --test-concurrency=1 --test src/*.test.js",
     "publish": "npm run build && cd dist && npm publish && cd .."
   },
   "dependencies": {

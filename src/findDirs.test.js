@@ -5,9 +5,9 @@ import findDirs from "./findDirs.js"
 
 describe("findDirs", () => {
 
-  const dirName1 = "test/subDir1"
-  const dirName2 = "test/subDir2"
-  const dirName11 = "test/subDir1/subDir11"
+  const subDir1 = "test/subDir1"
+  const subDir2 = "test/subDir2"
+  const subDir11 = "test/subDir1/subDir11"
 
   test("root", async () => {
     assert.deepEqual(await findDirs(["test/"]), ["test/"])
@@ -16,23 +16,23 @@ describe("findDirs", () => {
   test("findDirs", async () => {
     let dirsUnderRoot = "test/*/"
     assert.deepEqual(await findDirs([dirsUnderRoot]), [])
-    fs.mkdirSync(dirName1)
+    fs.mkdirSync(subDir1)
     try {
-      assert.deepEqual(await findDirs([dirsUnderRoot]), [dirName1])
-      fs.mkdirSync(dirName2)
+      assert.deepEqual(await findDirs([dirsUnderRoot]), [subDir1])
+      fs.mkdirSync(subDir2)
       try {
-        assert.deepEqual(await findDirs([dirsUnderRoot]), [dirName1, dirName2])
-        fs.mkdirSync(dirName11)
+        assert.deepEqual(await findDirs([dirsUnderRoot]), [subDir1, subDir2])
+        fs.mkdirSync(subDir11)
         try {
-          assert.deepEqual(await findDirs([dirsUnderRoot]), [dirName1, dirName2])
+          assert.deepEqual(await findDirs([dirsUnderRoot]), [subDir1, subDir2])
         } finally {
-          fs.rmdirSync(dirName11)
+          fs.rmdirSync(subDir11)
         }
       } finally {
-        fs.rmdirSync(dirName2)
+        fs.rmdirSync(subDir2)
       }
     } finally {
-      fs.rmdirSync(dirName1)
+      fs.rmdirSync(subDir1)
     }
   })
 })
