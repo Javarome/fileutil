@@ -1,6 +1,6 @@
-import { FileContents } from './FileContents.js';
 import test, { describe } from "node:test"
 import * as assert from "node:assert"
+import FileContents from "./FileContents.js"
 
 describe('SsgFile', () => {
 

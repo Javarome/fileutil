@@ -2,9 +2,24 @@
   "name": "@javarome/fileutil",
   "type": "module",
   "author": "Jérôme Beau <javarome@gmail.com> (https://javarome.com)",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "File utility functions",
-  "exports": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./copy": "./copy.js",
+    "./copyFile": "./copyFile.js",
+    "./copyFiles": "./copyFiles.js",
+    "./detectContentsEncoding": "./detectContentsEncoding.js",
+    "./detectEncoding": "./detectEncoding.js",
+    "./ensureDirectoryOf": "./ensureDirectoryOf.js",
+    "./findDirs": "./findDirs.js",
+    "./findSubDirs": "./findSubDirs.js",
+    "./subDirs": "./subDirs.js",
+    "./subDirsNames": "./subDirsNames.js",
+    "./toBufferEncoding": "./toBufferEncoding.js",
+    "./writeFile": "./writeFile.js",
+    "./FileContents": "./FileContents.js"
+  },
   "types": "./index.d.ts",
   "engines": {
     "node": ">=18"

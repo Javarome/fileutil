@@ -1,34 +1,11 @@
 import fs from "fs"
-import { writeFile } from "./writeFile.js"
-import { detectEncoding } from "./detectEncoding.js"
-
-/**
- * Language info about a file.
- */
-export class FileContentsLang {
-  /**
-   * The detected language for the file ("fr" for instance).
-   *
-   * @type {string | undefined}
-   */
-  lang
-
-  /**
-   * Other variants detected in the file's directory (["fr", "en"] for instance).
-   *
-   * A variant is a file with the same name and extension in the same directory, but with a "_language" 2-letter suffix.
-   *
-   * [] if there are no variants. Will contain "" if there is a variant with no language suffix.
-   *
-   * @type {string[]}
-   */
-  variants
-}
+import detectEncoding from "./detectEncoding.js"
+import writeFile from "./writeFile.js"
 
 /**
  * A file.
  */
-export class FileContents {
+export default class FileContents {
   /**
    * A file path with "directory/prefix[_lang].ext"
    *

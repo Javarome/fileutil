@@ -1,7 +1,7 @@
 import test, { describe } from "node:test"
 import * as fs from "node:fs"
 import * as assert from "node:assert"
-import { findDirs } from "./findDirs.js"
+import findDirs from "./findDirs.js"
 
 describe("findDirs", () => {
 

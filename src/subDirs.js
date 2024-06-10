@@ -6,7 +6,7 @@ import { readdir } from "fs/promises"
  * @param {string} fromDir The name of the root directory to look from.
  * @return {Promise<Dirent[]>}
  */
-export async function subDirs (fromDir) {
+export default async function subDirs (fromDir) {
   const dirs = await readdir(fromDir, { withFileTypes: true })
   return dirs.filter(dirEntry => dirEntry.isDirectory())
 }
