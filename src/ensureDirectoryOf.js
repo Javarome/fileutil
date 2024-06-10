@@ -1,23 +1,17 @@
-import test, { describe, after } from "node:test"
-import { ensureDirectoryOf } from "./index.js"
-import * as Assert from "node:assert"
-import * as fs from "node:fs"
-import * as path from "node:path"
+import path from "node:path"
+import fs from "fs"
 
-describe("ensureDirectoryOf", () => {
-
-  const dirName = "test/subDir"
-
-  test("test for subdir", () => {
-    const filePath = path.join(dirName, "someFile.txt")
-    const dirname = path.dirname(filePath)
-    Assert.equal(fs.existsSync(dirname), false)
-    Assert.equal(ensureDirectoryOf(filePath).endsWith(filePath), true)
-    Assert.equal(ensureDirectoryOf(filePath).endsWith(filePath), true)
-    Assert.equal(fs.existsSync(dirname), true)
-  })
-
-  after(() => {
-    fs.rmdirSync(dirName)
-  })
-})
+/**
+ * Checks if a directory exists and, if not, creates it.
+ *
+ * @param {string} filePath The path of the directory that must exist.
+ * @return {string} The resolved absolute file path.
+ */
+export function ensureDirectoryOf (filePath) {
+  const dirname = path.dirname(filePath)
+  if (!fs.existsSync(dirname)) {
+    ensureDirectoryOf(dirname) // Recursive to create the whole directories chain.
+    fs.mkdirSync(dirname)
+  }
+  return path.resolve(filePath)
+}

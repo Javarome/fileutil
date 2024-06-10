@@ -1,5 +1,6 @@
 import fs from "fs"
-import { detectEncoding, writeFile } from "./index.js"
+import { writeFile } from "./writeFile.js"
+import { detectEncoding } from "./detectEncoding.js"
 
 /**
  * Language info about a file.

@@ -1,6 +1,6 @@
 import test, { describe } from "node:test"
-import { toBufferEncoding } from "./index.js"
 import * as Assert from "node:assert"
+import { toBufferEncoding } from "./toBufferEncoding.js"
 
 describe("toBufferEncoding", () => {
 
