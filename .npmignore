@@ -1,0 +1,5 @@
+*.test.?js
+*TestUtil.?js
+*.md
+.circleci/
+.idea/

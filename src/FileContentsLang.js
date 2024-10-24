@@ -1,7 +1,7 @@
 /**
  * Language info about a file.
  */
-export default class FileContentsLang {
+export class FileContentsLang {
   /**
    * The detected language for the file ("fr" for instance).
    *

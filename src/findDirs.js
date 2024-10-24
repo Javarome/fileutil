@@ -1,4 +1,4 @@
-import findSubDirs from "./findSubDirs.js"
+import { findSubDirs } from "./findSubDirs.js"
 
 /**
  * Find subdirectories of a set of dirs.
@@ -7,7 +7,7 @@ import findSubDirs from "./findSubDirs.js"
  * @param {string[]} excludedDirs
  * @return {Promise<string[]>}
  */
-export default async function findDirs (fromDirs, excludedDirs = []) {
+export async function findDirs (fromDirs, excludedDirs = []) {
   let dirNames = []
   for (let fromDir of fromDirs) {
     const subDirs = await findSubDirs(fromDir, excludedDirs)

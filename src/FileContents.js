@@ -1,11 +1,12 @@
 import fs from "fs"
-import detectEncoding from "./detectEncoding.js"
-import writeFile from "./writeFile.js"
+import { writeFile } from "./writeFile.js"
+import { detectEncoding } from "./detectEncoding.js"
+/** @import { FileContentsLang } from "./FileContentsLang.js" */
 
 /**
  * A file.
  */
-export default class FileContents {
+export class FileContents {
   /**
    * A file path with "directory/prefix[_lang].ext"
    *

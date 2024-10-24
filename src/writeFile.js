@@ -1,5 +1,5 @@
 import { promises as fsAsync } from "fs"
-import ensureDirectoryOf from "./ensureDirectoryOf.js"
+import { ensureDirectoryOf } from "./ensureDirectoryOf.js"
 
 /**
  * Writes a file. If the file directory doesn't exit, it is created.
@@ -9,7 +9,7 @@ import ensureDirectoryOf from "./ensureDirectoryOf.js"
  * @param {BufferEncoding} encoding The file contents encoding scheme.
  * @return {Promise<void>}
  */
-export default async function writeFile (filePath, contents, encoding) {
+export async function writeFile (filePath, contents, encoding) {
   ensureDirectoryOf(filePath)
   await fsAsync.writeFile(filePath, contents, { encoding })
 }

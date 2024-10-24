@@ -4,7 +4,7 @@
  * @param {string | undefined} encoding The encoding name ("iso-8859-1", "windows-1252", etc.)
  * @return {BufferEncoding | undefined} The matching BufferEncoding, or undefined if not supported.
  */
-export default function toBufferEncoding (encoding) {
+export function toBufferEncoding (encoding) {
   switch (encoding?.toLowerCase()) {
     case "utf-8":
       return "utf-8"

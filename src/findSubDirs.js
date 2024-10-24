@@ -1,6 +1,6 @@
 import path from "node:path"
-import findDirs from "./findDirs.js"
-import subDirsNames from "./subDirsNames.js"
+import { findDirs } from "./findDirs.js"
+import { subDirsNames } from "./subDirsNames.js"
 
 /**
  * Find subdirectories of a set of dirs.
@@ -9,7 +9,7 @@ import subDirsNames from "./subDirsNames.js"
  * @param {string[]} excludedDirs
  * @return {Promise<string[]>}
  */
-export default async function findSubDirs (rootDir, excludedDirs = []) {
+export async function findSubDirs (rootDir, excludedDirs = []) {
   /** @type {string[]} */
   let subDirs = []
   if (rootDir.endsWith("/*/")) {

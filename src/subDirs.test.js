@@ -1,8 +1,8 @@
 import test, { describe } from "node:test"
 import * as fs from "node:fs"
 import * as assert from "node:assert"
-import subDirs from "./subDirs.js"
-import subDirsNames from "./subDirsNames.js"
+import { subDirs } from "./subDirs.js"
+import { subDirsNames } from "./subDirsNames.js"
 
 describe("subDirs", () => {
 

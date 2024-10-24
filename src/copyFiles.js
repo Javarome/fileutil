@@ -1,4 +1,4 @@
-import copyFile from "./copyFile.js"
+import { copyFile } from "./copyFile.js"
 
 /**
  * Copy multiple files to a directory.
@@ -7,7 +7,7 @@ import copyFile from "./copyFile.js"
  * @param {string} toDir
  * @return {string[]}
  */
-export default function copyFiles (sourceFiles, toDir) {
+export function copyFiles (sourceFiles, toDir) {
   /** @type {string[]} */
   const result = []
   for (const sourceFile of sourceFiles) {

@@ -1,5 +1,5 @@
-import copyFiles from "./copyFiles.js"
-import { promise as glob } from "glob-promise"
+import { glob } from "glob"
+import { copyFiles } from "./copyFiles.js"
 
 /**
  * Copy files to a destination directory.
@@ -9,7 +9,7 @@ import { promise as glob } from "glob-promise"
  * @param {IOptions} options
  * @return {Promise<string[]>} the list of output files.
  */
-export default async function copy (toDir, sourcePatterns, options = undefined) {
+export async function copy (toDir, sourcePatterns, options = undefined) {
   /** @type {string[]} */
   let result = []
   for (const sourcePattern of sourcePatterns) {

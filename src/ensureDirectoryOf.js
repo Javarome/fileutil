@@ -7,7 +7,7 @@ import fs from "fs"
  * @param {string} filePath The path of the directory that must exist.
  * @return {string} The resolved absolute file path.
  */
-export default function ensureDirectoryOf (filePath) {
+export function ensureDirectoryOf (filePath) {
   const dirname = path.dirname(filePath)
   if (!fs.existsSync(dirname)) {
     ensureDirectoryOf(dirname) // Recursive to create the whole directories chain.

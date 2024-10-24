@@ -1,4 +1,4 @@
-import subDirs from "./subDirs.js"
+import { subDirs } from "./subDirs.js"
 
 /**
  * Get a list of subdirectories' names.
@@ -6,7 +6,7 @@ import subDirs from "./subDirs.js"
  * @param {string} fromDir The name of the root directory to look from.
  * @return {Promise<string[]>}
  */
-export default async function subDirsNames (fromDir) {
+export async function subDirsNames (fromDir) {
   const dirs = await subDirs(fromDir)
   return dirs.map(dirEntry => dirEntry.name)
 }
