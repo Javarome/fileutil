@@ -2,10 +2,10 @@
   "name": "@javarome/fileutil",
   "type": "module",
   "author": "Jérôme Beau <javarome@gmail.com> (https://javarome.com)",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "File utility functions",
-  "main": "src/index.mjs",
-  "types": "types/index.d.mts",
+  "main": "src/index.js",
+  "types": "types/index.d.js",
   "engines": {
     "node": ">=20"
   },

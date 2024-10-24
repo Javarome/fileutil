@@ -5,7 +5,7 @@ import { globSync } from "glob"
  * @param {string} exclude
  * @return {string[]}
  */
-export function findDirectoriesContaining (fileName, exclude = "") {
+export function findDirsContaining (fileName, exclude = "") {
   function onlyUnique (value, index, self) {
     return self.indexOf(value) === index
   }
