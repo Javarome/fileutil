@@ -21,3 +21,9 @@ File utility functions.
   - `static getLang(filePath): SsgFileLang` guesses a file language and its language file variants in the same directory.
   - `static getContents(fileName, declaredEncoding)` gets the text contents of a file, and how it is encoded.
   - `write()` writes the file contents according to its encoding.
+
+## Import
+For instance:
+```js
+import { FileContents, copy } from "@javarome/fileutil"
+```
