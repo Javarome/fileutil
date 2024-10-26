@@ -1,6 +1,6 @@
 {
-  "include": ["src/*.js"],
-  "exclude": ["src/*.test.js"],
+  "include": ["src/*.?js"],
+  "exclude": ["src/*.test.?js"],
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,

@@ -1,6 +1,6 @@
 import path from "node:path"
 import fs from "fs"
-import { ensureDirectoryOf } from "./ensureDirectoryOf.js"
+import { ensureDirectoryOf } from "./ensureDirectoryOf.mjs"
 
 /**
  * Copy a file to a directory.

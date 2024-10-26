@@ -2,8 +2,8 @@ import test, { describe } from "node:test"
 import fs from "node:fs"
 import * as path from "node:path"
 import * as assert from "node:assert"
-import { copyFile } from "./copyFile.js"
-import { copyFiles } from "./copyFiles.js"
+import { copyFile } from "./copyFile.mjs"
+import { copyFiles } from "./copyFiles.mjs"
 
 describe("copy", () => {
 

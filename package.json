@@ -2,12 +2,12 @@
   "name": "@javarome/fileutil",
   "type": "module",
   "author": "Jérôme Beau <javarome@gmail.com> (https://javarome.com)",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "File utility functions",
-  "main": "src/index.js",
-  "types": "types/index.d.js",
+  "main": "src/index.mjs",
+  "types": "types/index.d.mjs",
   "engines": {
-    "node": ">=20"
+    "node": "20 || >=22"
   },
   "license": "MIT",
   "homepage": "https://github.com/Javarome/fileutil#readme",
@@ -18,7 +18,7 @@
   "scripts": {
     "prebuild": "npm install && npm test",
     "build": "rimraf ./types && ./node_modules/typescript/bin/tsc",
-    "test": "node --test-concurrency=1 --test src/*.test.js",
+    "test": "node --test-concurrency=1 --test",
     "test-ci": "node --test --experimental-test-coverage --test-reporter spec",
     "prepublishOnly": "npm run build"
   },

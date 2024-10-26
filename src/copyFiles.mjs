@@ -1,4 +1,4 @@
-import { copyFile } from "./copyFile.js"
+import { copyFile } from "./copyFile.mjs"
 
 /**
  * Copy multiple files to a directory.

@@ -1,6 +1,6 @@
 import fs from "fs"
-import { writeFile } from "./writeFile.js"
-import { detectEncoding } from "./detectEncoding.js"
+import { writeFile } from "./writeFile.mjs"
+import { detectEncoding } from "./detectEncoding.mjs"
 /** @import { FileContentsLang } from "./FileContentsLang.js" */
 
 /**
@@ -26,7 +26,6 @@ export class FileContents {
   /**
    * Language info about the file.
    *
-   * @protected
    * @readonly
    * @type {FileContentsLang}
    */
@@ -44,7 +43,6 @@ export class FileContents {
    * The file contents as text.
    *
    * @protected
-   * @readonly
    * @type {string}
    */
   _contents

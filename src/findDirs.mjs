@@ -1,4 +1,4 @@
-import { findSubDirs } from "./findSubDirs.js"
+import { findSubDirs } from "./findSubDirs.mjs"
 
 /**
  * Find subdirectories of a set of dirs.

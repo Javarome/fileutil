@@ -1,5 +1,5 @@
 import { detectEncoding as _detectEncoding } from "char-encoding-detector"
-import { toBufferEncoding } from "./toBufferEncoding.js"
+import { toBufferEncoding } from "./toBufferEncoding.mjs"
 
 /**
  * Detect the encoding of some contents.

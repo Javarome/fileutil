@@ -9,8 +9,8 @@ File utility functions.
 - `subDirs (fromDir): Promise<Dirent[]` gets a list of subdirectories.
 - `subDirsNames (fromDir): Promise<string[]>` gets a list of subdirectories' names.
 - `findDirs (fromDirs, excludedDirs): Promise<string[]>` finds directories under a set of dirs.
-- `findDirsContaining (fileName, exclude?): Promise<string[]>` finds directories under a set of dirs.
-- `findSubDirs (ofDir, excludedDirs = []): Promise<string[]>` finds sub-directories of a dir.
+- `findDirsContaining (fileName, exclude?): Promise<string[]>` finds directories containing a file (but other).
+- `findSubDirs (ofDir, excludedDirs = []): Promise<string[]>` finds subdirectories of a dir.
 - `copy (toDir, sourcePatterns, options): Promise<string[]>` copies files to a destination directory.
 - `copyFiles (sourceFiles, toDir) {): string[]` copies multiple files to a directory.
 - `copyFile (sourceFilePath, destDir): string` copies a file to a directory.

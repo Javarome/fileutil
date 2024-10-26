@@ -1,6 +1,6 @@
 import path from "node:path"
-import { findDirs } from "./findDirs.js"
-import { subDirsNames } from "./subDirsNames.js"
+import { findDirs } from "./findDirs.mjs"
+import { subDirsNames } from "./subDirsNames.mjs"
 
 /**
  * Find subdirectories of a set of dirs.

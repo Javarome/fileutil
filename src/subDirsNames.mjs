@@ -1,4 +1,4 @@
-import { subDirs } from "./subDirs.js"
+import { subDirs } from "./subDirs.mjs"
 
 /**
  * Get a list of subdirectories' names.

@@ -1,5 +1,5 @@
 import { glob } from "glob"
-import { copyFiles } from "./copyFiles.js"
+import { copyFiles } from "./copyFiles.mjs"
 
 /**
  * Copy files to a destination directory.

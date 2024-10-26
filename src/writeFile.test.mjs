@@ -1,7 +1,7 @@
 import test, { describe } from "node:test"
 import * as Assert from "node:assert"
 import fs from "node:fs"
-import { writeFile } from "./writeFile.js"
+import { writeFile } from "./writeFile.mjs"
 
 describe("writeFile", () => {
 

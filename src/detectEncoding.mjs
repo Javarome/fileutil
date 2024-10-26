@@ -1,5 +1,5 @@
 import fs from "fs"
-import { detectContentsEncoding } from "./detectContentsEncoding.js"
+import { detectContentsEncoding } from "./detectContentsEncoding.mjs"
 
 /**
  * Detect the encoding of some file contents.

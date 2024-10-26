@@ -1,5 +1,5 @@
 import { promises as fsAsync } from "fs"
-import { ensureDirectoryOf } from "./ensureDirectoryOf.js"
+import { ensureDirectoryOf } from "./ensureDirectoryOf.mjs"
 
 /**
  * Writes a file. If the file directory doesn't exit, it is created.

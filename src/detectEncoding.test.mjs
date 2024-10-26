@@ -1,7 +1,7 @@
 import test, { describe } from "node:test"
 import * as Assert from "node:assert"
-import { detectEncoding } from "./detectEncoding.js"
-import { detectContentsEncoding } from "./detectContentsEncoding.js"
+import { detectEncoding } from "./detectEncoding.mjs"
+import { detectContentsEncoding } from "./detectContentsEncoding.mjs"
 
 describe("detectEncoding", () => {
 
