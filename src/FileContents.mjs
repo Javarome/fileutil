@@ -26,10 +26,10 @@ export class FileContents {
   /**
    * Language info about the file.
    *
-   * @readonly
+   * @protected
    * @type {FileContentsLang}
    */
-  lang
+  _lang
 
   /**
    * Language info about the file.
@@ -91,9 +91,19 @@ export class FileContents {
   ) {
     this.name = name
     this.encoding = encoding
-    this.lang = lang
+    this._lang = lang
     this.lastModified = lastModified
     this._contents = contents
+  }
+
+  /**
+   * Language info about the file.
+   *
+   * @readonly
+   * @type {FileContentsLang}
+   */
+  get lang() {
+    return this._lang
   }
 
   /**
