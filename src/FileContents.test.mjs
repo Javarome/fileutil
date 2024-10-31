@@ -9,7 +9,7 @@ describe('SsgFile', () => {
     assert.deepEqual(langDefault, {lang: '', variants: ['en', 'fr']});
 
     const langFr = FileContents.getLang("test/utf-8_fr.txt");
-    assert.deepEqual(langFr, {lang: 'fr', variants: ['', 'en']});
+    assert.deepEqual(langFr, {lang: 'fr', variants: ['en']});
   });
 
   test('lang with no path', () => {
@@ -19,12 +19,12 @@ describe('SsgFile', () => {
 
   test('files', () => {
     const langFr = FileContents.getLang("test/utf-8_fr.txt");
-    assert.deepEqual(langFr, {lang: 'fr', variants: ['', 'en']});
+    assert.deepEqual(langFr, {lang: 'fr', variants: ['en']});
 
     const fileDefault = FileContents.read("test/utf-8.txt");
     assert.deepEqual(fileDefault.lang, {lang: '', variants: ['en', 'fr']});
 
     const langEn = FileContents.read("test/utf-8_en.txt");
-    assert.deepEqual(langEn.lang, {lang: 'en', variants: ['', 'fr']});
+    assert.deepEqual(langEn.lang, {lang: 'en', variants: ['fr']});
   });
 });

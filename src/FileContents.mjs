@@ -170,7 +170,7 @@ export class FileContents {
           const fileExec = FileContents.fileRegex.exec(f)
           return fileExec ? fileExec[2] || "" : undefined
         })
-        .filter(v => v !== void 0 && v !== lang)
+        .filter(v => !!v  && v !== lang)
       )
       variants = Array.from(unique)
     }
