@@ -93,7 +93,7 @@ export class FileContents {
     this.encoding = encoding
     this._lang = lang
     this.lastModified = lastModified
-    this._contents = contents
+    this.contents = contents
   }
 
   /**
