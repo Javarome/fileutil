@@ -1,7 +1,7 @@
 import fs from "fs"
 import { writeFile } from "./writeFile.mjs"
 import { detectEncoding } from "./detectEncoding.mjs"
-/** @import { FileContentsLang } from "./FileContentsLang.js" */
+/** @import { FileContentsLang } from "./FileContentsLang.mjs" */
 
 /**
  * A file.
@@ -174,15 +174,17 @@ export class FileContents {
       lang = exec[3] || ""
       const ext = exec[4]
       const files = fs.readdirSync(dir)
-      const unique /** @type {Set<string>} */ = new Set(files
+      const fileVariants = files
         .filter(f => f.startsWith(fileName) && f.endsWith(ext)) // Only with same filename prefix and same ext
         .map(f => {
           const fileExec = FileContents.fileRegex.exec(f)
           return fileExec ? fileExec[2] || "" : undefined
         })
-        .filter(v => !!v  && v !== lang)
-      )
-      variants = Array.from(unique)
+      const namedVariants = new Set(fileVariants.filter(v => !!v && v !== lang))
+      variants = Array.from(namedVariants)
+      if (variants.length === 0 && lang && fileVariants.includes("")) {
+        variants.push("")
+      }
     }
     return {lang, variants}
   }

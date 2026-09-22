@@ -18,5 +18,5 @@ export class FileContentsLang {
    *
    * @type {string[]}
    */
-  variants
+  variants = []
 }
