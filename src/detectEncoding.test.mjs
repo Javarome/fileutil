@@ -6,7 +6,9 @@ import { detectContentsEncoding } from "./detectContentsEncoding.mjs"
 describe("detectEncoding", () => {
 
   test("detectContentsEncoding", () => {
-    Assert.equal(detectContentsEncoding("abc"), "UTF-32BE")
+    Assert.equal(detectContentsEncoding("abc"), "utf-8")
+    Assert.equal(detectContentsEncoding(Buffer.from("<p>ASCII only</p>", "latin1")), "utf-8")
+    Assert.equal(detectContentsEncoding(Buffer.from("Début de l'article, déjà écrit en ISO-8859-1", "latin1")), "latin1")
   })
 
   test("detectEncoding", () => {
